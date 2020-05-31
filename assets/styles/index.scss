@@ -1,0 +1,30 @@
+$aqua: #59c5c2;
+$darkerBlue: #202833;
+$blackish: #0b0c10;
+$gray: #f5f5f5;
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+html,
+body,
+#app {
+font-family: 'Raleway', sans-serif !important;
+}
+.aqua--text {
+  color: $aqua;
+}
+.position--absolute {
+  position: absolute;
+}
+.position--relative {
+  position: relative;
+}
+.title-underline {
+  height: 4px;
+  margin: 0px 0 75px 0;
+}
+
+@mixin mobile() {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
