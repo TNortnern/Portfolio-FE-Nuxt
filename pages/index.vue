@@ -29,7 +29,7 @@ export default {
   },
   layout: 'default',
   head: () => ({
-    title: 'Admin - Login'
+    title: 'Portfolio'
   })
 }
 </script>
