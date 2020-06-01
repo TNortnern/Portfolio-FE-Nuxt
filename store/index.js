@@ -26,7 +26,6 @@ const mutations = {
 }
 const actions = {
   async nuxtServerInit ({ commit }, context) {
-    console.log(context.app.apolloProvider.clients.defaultClient)
     const apollo = context.app.apolloProvider.clients.defaultClient
     await apollo
       .query({

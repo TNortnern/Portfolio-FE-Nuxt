@@ -27,6 +27,9 @@ export default {
     Projects,
     Contact
   },
-  layout: 'default'
+  layout: 'default',
+  head: () => ({
+    title: 'Admin - Login'
+  })
 }
 </script>

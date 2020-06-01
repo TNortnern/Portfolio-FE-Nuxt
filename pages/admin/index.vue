@@ -10,6 +10,7 @@
 import Login from '@/components/admin/Login'
 export default {
   layout: 'flat',
+  middleware: 'guest',
   components: {
     Login
   },
@@ -17,7 +18,10 @@ export default {
     user () {
       return this.$store.state.auth.user
     }
-  }
+  },
+  head: () => ({
+    title: 'Admin - Login'
+  })
 }
 </script>
 

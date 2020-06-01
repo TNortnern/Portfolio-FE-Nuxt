@@ -20,7 +20,6 @@ import ProjectForm from '@/components/admin/ProjectForm'
 import ProjectCards from '@/components/portfolio/projects/ProjectCards'
 export default {
   layout: 'flat',
-  middleware: 'isAuth',
   components: {
     ProjectCards,
     AdminLayout,
@@ -52,7 +51,11 @@ export default {
     toggleAdding () {
       this.adding = !this.adding
     }
-  }
+  },
+  head: () => ({
+    title: 'Admin - Projects'
+  }),
+  middleware: 'isAuth'
 }
 </script>
 

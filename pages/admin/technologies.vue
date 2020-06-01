@@ -112,7 +112,10 @@ export default {
         }
       })
     }
-  }
+  },
+  head: () => ({
+    title: 'Admin - Technologies'
+  })
 }
 </script>
 
