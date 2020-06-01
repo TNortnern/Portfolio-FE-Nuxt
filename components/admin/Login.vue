@@ -92,10 +92,14 @@ export default {
           password: this.password
         }
       })
-        .then((res) => {
+        .then(async (res) => {
           this.loading = false
           this.$store.commit('isAuthenticated', true)
-          localStorage.setItem('token', res.data.login.token)
+          this.$cookies.set('token', res.data.login.token, {
+            path: '/',
+            maxAge: 60 * 60 * 24 * 7
+          })
+          await this.$apolloHelpers.onLogin(res.data.login.token)
           const user = {
             user: res.data.login.user,
             token: res.data.login.token

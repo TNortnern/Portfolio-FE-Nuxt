@@ -63,6 +63,7 @@ import { deleteTechnology } from '@/graphql/Mutations'
 
 export default {
   layout: 'flat',
+  middleware: 'isAuth',
   components: {
     AdminLayout,
     TechnologyForm

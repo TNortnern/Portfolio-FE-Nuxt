@@ -16,6 +16,8 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@nuxtjs/apollo": "^4.0.1-rc.1",
     "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/now-builder": "^0.17.2",
+    "cookie-universal-nuxt": "^2.1.4",
     "core-js": "2.6.5",
     "nuxt": "^2.0.0",
     "vee-validate": "^3.3.1",

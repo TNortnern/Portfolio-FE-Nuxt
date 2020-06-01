@@ -56,9 +56,10 @@ export default {
     }
   },
   methods: {
-    logout () {
+    async logout () {
       this.$store.commit('isAuthenticated', false)
-      localStorage.removeItem('token')
+      this.$cookies.remove('token')
+      await this.$apolloHelpers.onLogout()
       this.$router.push('/admin')
     }
   }

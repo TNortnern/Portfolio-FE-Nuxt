@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-// import '@fortawesome/fontawesome-free/css/all.css'
 export default {
   mode: 'universal',
   /*
@@ -51,14 +49,18 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    ['cookie-universal-nuxt', { alias: 'cookies' }]
   ],
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://api-portfolio3.herokuapp.com/graphql'
+        httpEndpoint: 'https://api-portfolio3.herokuapp.com/graphql',
+        getAuth: () => 'Bearer token'
       }
+      // tokenName: 'token'
     }
+    // authenticationType: ''
   },
   /*
    ** vuetify module configuration
@@ -66,20 +68,7 @@ export default {
    */
   vuetify: {
     defaultAssets: { icons: 'fa' },
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+    customVariables: ['~/assets/variables.scss']
   },
   /*
    ** Build configuration
