@@ -26,7 +26,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '~/assets/styles/index.scss'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -34,7 +36,8 @@ export default {
     { src: '~/plugins/vue-particles', ssr: false, mode: 'client' },
     { src: '~/plugins/global-components', ssr: false, mode: 'client' },
     { src: '~/plugins/vue-scrolls', ssr: false, mode: 'client' },
-    { src: '~/plugins/aos', ssr: false, mode: 'client' }
+    { src: '~/plugins/aos', ssr: false, mode: 'client' },
+    { src: '~/plugins/vee-validate', ssr: false, mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules

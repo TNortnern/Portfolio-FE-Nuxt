@@ -1,15 +1,15 @@
 <template>
   <v-app>
     <nuxt />
-    <!-- <Footer /> -->
+    <Footer />
   </v-app>
 </template>
 
 <script>
-// import Footer from '~/components/layout/Footer'
+import Footer from '~/components/layout/Footer'
 export default {
   components: {
-    // Footer
+    Footer
   },
   data () {
     return {
