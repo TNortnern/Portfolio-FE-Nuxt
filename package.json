@@ -16,7 +16,9 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@nuxtjs/dotenv": "^1.4.0",
     "nuxt": "^2.0.0",
-    "vue-particles": "^1.0.9"
+    "vue-particles": "^1.0.9",
+    "vue-scrollactive": "^0.9.3",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
