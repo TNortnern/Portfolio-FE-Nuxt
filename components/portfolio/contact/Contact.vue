@@ -1,7 +1,7 @@
 <template>
   <div id="contact">
     <h1
-      data-aos="fade-in"
+      data-aos="fade"
       class="display-1 text-uppercase text-center mb-0"
     >
       Contact
