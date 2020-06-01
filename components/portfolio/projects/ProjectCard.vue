@@ -5,7 +5,7 @@
     xl="3"
     sm="6"
   >
-    <!-- <ProjectModal
+    <ProjectModal
       :id="project.id"
       :modal-open="modalOpen"
       :toggle-modal="toggleModal"
@@ -14,7 +14,7 @@
       :editing="project"
       :open-modal="editModalOpen"
       @toggle="toggleEditModal"
-    /> -->
+    />
 
     <div
       v-if="admin"
@@ -74,14 +74,14 @@
 </template>
 
 <script>
-// import ProjectModal from './ProjectModal'
-// import { deleteProject } from '@/graphql/Mutations'
-// import ProjectsQuery from '@/graphql/ProjectsQuery'
-// import ProjectForm from '@/components/admin/ProjectForm'
+import ProjectModal from './ProjectModal'
+import { deleteProject } from '@/graphql/Mutations'
+import ProjectsQuery from '@/graphql/ProjectsQuery'
+import ProjectForm from '@/components/admin/ProjectForm'
 export default {
   components: {
-    // ProjectModal,
-    // ProjectForm
+    ProjectModal,
+    ProjectForm
   },
   props: {
     name: {
@@ -138,25 +138,25 @@ export default {
     },
     toggleEditModal (val) {
       if (val || val === false) { this.editModalOpen = val } else { this.editModalOpen = !this.editModalOpen }
+    },
+    deleteItem (id) {
+      this.$apollo.mutate({
+        mutation: deleteProject,
+        variables: {
+          id
+        },
+        update: (store) => {
+          const data = store.readQuery({ query: ProjectsQuery })
+          const index = data.projects.findIndex(t => t.id === id)
+          if (index !== -1) {
+            data.projects.splice(index, 1)
+            store.writeQuery({ query: ProjectsQuery, data })
+          } else {
+            alert('could not find index!')
+          }
+        }
+      })
     }
-    // deleteItem (id) {
-    //   this.$apollo.mutate({
-    //     mutation: deleteProject,
-    //     variables: {
-    //       id
-    //     },
-    //     update: (store) => {
-    //       const data = store.readQuery({ query: ProjectsQuery })
-    //       const index = data.projects.findIndex(t => t.id === id)
-    //       if (index !== -1) {
-    //         data.projects.splice(index, 1)
-    //         store.writeQuery({ query: ProjectsQuery, data })
-    //       } else {
-    //         alert('could not find index!')
-    //       }
-    //     }
-    //   })
-    // }
   }
 }
 </script>

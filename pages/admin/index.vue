@@ -1,12 +1,15 @@
 <template>
   <div class="admin">
-    <Login />
+    <client-only>
+      <Login />
+    </client-only>
   </div>
 </template>
 
 <script>
 import Login from '@/components/admin/Login'
 export default {
+  layout: 'flat',
   components: {
     Login
   },

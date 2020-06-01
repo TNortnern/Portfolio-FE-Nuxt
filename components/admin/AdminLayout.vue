@@ -44,8 +44,8 @@
 </template>
 
 <script>
-import DesktopDrawer from './DesktopDrawer'
-import TabletDrawer from './TabletDrawer'
+import DesktopDrawer from '~/components/admin/DesktopDrawer'
+import TabletDrawer from '~/components/admin/TabletDrawer'
 export default {
   components: {
     DesktopDrawer,

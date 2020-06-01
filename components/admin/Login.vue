@@ -100,8 +100,8 @@ export default {
             user: res.data.login.user,
             token: res.data.login.token
           }
-          this.$store.commit('setUser', user)
-          this.$router.push('projects')
+          this.$store.commit('auth/setUser', user)
+          this.$router.push('admin/projects')
         })
         .catch((err) => {
           this.loading = false

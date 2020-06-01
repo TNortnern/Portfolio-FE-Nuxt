@@ -19,6 +19,7 @@ import AdminLayout from '@/components/admin/AdminLayout'
 import ProjectForm from '@/components/admin/ProjectForm'
 import ProjectCards from '@/components/portfolio/projects/ProjectCards'
 export default {
+  layout: 'flat',
   components: {
     ProjectCards,
     AdminLayout,

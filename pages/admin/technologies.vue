@@ -62,6 +62,7 @@ import TechnologiesQuery from '@/graphql/TechnologiesQuery'
 import { deleteTechnology } from '@/graphql/Mutations'
 
 export default {
+  layout: 'flat',
   components: {
     AdminLayout,
     TechnologyForm
