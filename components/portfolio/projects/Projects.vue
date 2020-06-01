@@ -7,7 +7,7 @@
       Projects
     </h1>
     <Underline data-aos="fade-in" />
-    <!-- <v-tabs
+    <v-tabs
       v-model="tab"
       :background-color="$store.state.constants.colors.gray"
       light
@@ -22,8 +22,8 @@
       >
         {{ item.name }}
       </v-tab>
-    </v-tabs> -->
-    <ProjectCards v-if="items" />
+    </v-tabs>
+    <ProjectCards v-if="items.length" />
     <div
       v-else
       class="text-center"
@@ -43,21 +43,34 @@ export default {
   components: {
     ProjectCards
   },
-
   computed: {
-    // tab: {
-    //   get () {
-    //     return this.$store.state.projects.tab
-    //   },
-    //   set (val) {
-    //     this.$store.commit('setTab', val)
-    //   }
-    // },
+    tab: {
+      get () {
+        return this.$store.state.projects.tab
+      },
+      set (val) {
+        this.$store.commit('projects/setTab', val)
+      }
+    },
     items () {
-      const test = 0
-      const test1 = 1
-      if (test1 > test) { return [] }
       return this.$store.state.projects.items
+    }
+  },
+  mounted () {
+    this.initializeTabs()
+  },
+  methods: {
+    initializeTabs () {
+      let techs = []
+      this.$store.state.projects.all.forEach((project) => {
+        project.technologies.forEach((tech) => {
+          const exists = techs.find(t => t.name === tech.name)
+          if (!exists) {
+            techs = [...techs, tech]
+          }
+        })
+      })
+      this.$store.commit('projects/setItems', techs)
     }
   }
 }

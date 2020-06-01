@@ -33,7 +33,6 @@
 
 <script>
 import ProjectCard from './ProjectCard'
-import { projects } from '~/dummydata'
 export default {
   components: {
     ProjectCard
@@ -51,19 +50,16 @@ export default {
   },
   computed: {
     projects () {
-      return projects
+      if (this.currentFilter !== 'All') {
+        return this.$store.state.projects.all.filter((project) => {
+          return project.technologies.some(tech => tech.name === this.currentFilter)
+        })
+      }
+      return this.$store.state.projects.all
+    },
+    currentFilter () {
+      return this.$store.state.projects.items[this.$store.state.projects.tab.name].name
     }
-    // projects () {
-    //   if (this.currentFilter !== 'All') {
-    //     return this.$store.state.projects.all.filter((project) => {
-    //       return project.technologies.some(tech => tech.name === this.currentFilter)
-    //     })
-    //   }
-    //   return this.$store.state.projects.all
-    // },
-    // currentFilter () {
-    //   return this.$store.state.projects.items[this.$store.state.projects.tab.name].name
-    // }
   },
   watch: {
     currentFilter (newval) {

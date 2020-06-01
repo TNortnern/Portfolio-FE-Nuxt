@@ -26,9 +26,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    '~/assets/styles/index.scss'
-  ],
+  css: ['~/assets/styles/index.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -52,8 +50,16 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/apollo'
   ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://api-portfolio3.herokuapp.com/graphql'
+      }
+    }
+  },
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

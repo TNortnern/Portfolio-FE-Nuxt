@@ -1,3 +1,4 @@
+import gql from 'graphql-tag'
 export const state = () => ({
   navItems: [
     {
@@ -24,7 +25,30 @@ const mutations = {
   }
 }
 const actions = {
-
+  async nuxtServerInit ({ commit }, context) {
+    const apollo = context.app.apolloProvider.clients.defaultClient
+    await apollo
+      .query({
+        query: gql`
+          {
+            projects {
+              id
+              name
+              images
+              technologies {
+                name
+              }
+            }
+          }
+        `
+      })
+      .then(({ data }) => {
+        commit('projects/setProjects', data.projects)
+      })
+      .catch((err) => {
+        console.log('err', err)
+      })
+  }
 }
 
 export default {

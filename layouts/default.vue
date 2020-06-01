@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <nuxt />
-    <Footer />
+    <client-only>
+      <Footer />
+    </client-only>
   </v-app>
 </template>
 
