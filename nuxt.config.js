@@ -13,7 +13,10 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { href: 'assets/css/style.css?ver=1.2', rel: 'stylesheet', type: 'text/css' }
+    ]
+
   },
   /*
    ** Customize the progress-bar color
