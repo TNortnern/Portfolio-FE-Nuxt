@@ -42,7 +42,7 @@
             color="white"
             outlined
             x-large
-            href="https://www.docdroid.net/nn6aCtP/tnorthernresume-1-pdf"
+            href="https://www.docdroid.net/nBFtuGB/tnorthernresume-pdf"
             target="__blank"
           >
             <span class="headline text-capitalize">Resume</span>
