@@ -2,7 +2,7 @@ import Vue from 'vue'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-
+// aos
 Vue.use(
   AOS.init({
     // Global settings:
