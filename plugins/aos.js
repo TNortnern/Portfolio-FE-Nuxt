@@ -6,7 +6,6 @@ import 'aos/dist/aos.css'
 Vue.use(
   AOS.init({
     // Global settings:
-    disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
