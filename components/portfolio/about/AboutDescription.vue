@@ -10,7 +10,7 @@
         data-aos-duration="350"
       >
         <img
-          src="https://u5u9p8d6.stackpathcdn.com/wp-content/uploads/2019/05/042.jpg"
+          src="https://i.imgur.com/krZgJMr.jpg"
           alt="person typing"
           class="about__description-image"
         >
