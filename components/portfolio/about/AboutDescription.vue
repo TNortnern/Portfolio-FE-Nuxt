@@ -10,7 +10,7 @@
         data-aos-duration="350"
       >
         <img
-          src="https://i.imgur.com/4XJ2JwZ.jpg"
+          src="@/assets/other/persontyping.png"
           alt="person typing"
           class="about__description-image"
         >
