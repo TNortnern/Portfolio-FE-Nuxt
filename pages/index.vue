@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
 import MobileNavigation from '~/components/layout/mobilenav/MobileNavigation'
 import Hero from '~/components/portfolio/hero/Hero'
 import Navbar from '~/components/layout/Navbar'
@@ -29,28 +28,6 @@ export default {
     Contact
   },
   layout: 'default',
-  async fetch () {
-    await this.$apollo.query({
-      query: gql`
-          {
-            projects {
-              id
-              name
-              images
-              technologies {
-                name
-              }
-            }
-          }
-        `
-    })
-      .then(({ data }) => {
-        this.$store.commit('projects/setProjects', data.projects)
-      })
-      .catch((err) => {
-        console.log('err', err)
-      })
-  },
   head: () => ({
     title: 'Portfolio'
   })
