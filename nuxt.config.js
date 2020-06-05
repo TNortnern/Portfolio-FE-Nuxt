@@ -50,7 +50,6 @@ export default {
    */
   modules: [
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
     '@nuxtjs/apollo',
     ['cookie-universal-nuxt', { alias: 'cookies' }]
   ],

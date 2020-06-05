@@ -6,11 +6,13 @@
     sm="6"
   >
     <ProjectModal
+      v-if="modalOpen"
       :id="project.id"
       :modal-open="modalOpen"
       :toggle-modal="toggleModal"
     />
     <ProjectForm
+      v-if="editModalOpen"
       :editing="project"
       :open-modal="editModalOpen"
       @toggle="toggleEditModal"
