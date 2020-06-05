@@ -42,9 +42,9 @@ export default {
     '@nuxtjs/vuetify',
     '@aceforth/nuxt-optimized-images'
   ],
-   optimizedImages: {
+  optimizedImages: {
     optimizeImages: true
-  }
+  },
   /*
    ** Nuxt.js modules
    */
