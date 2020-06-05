@@ -14,7 +14,6 @@ export default {
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
-
   },
   /*
    ** Customize the progress-bar color
@@ -40,8 +39,12 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@aceforth/nuxt-optimized-images'
   ],
+   optimizedImages: {
+    optimizeImages: true
+  }
   /*
    ** Nuxt.js modules
    */
