@@ -14,7 +14,6 @@
       centered
       :slider-color="$store.state.constants.colors.blackish"
       :color="$store.state.constants.colors.blackish"
-      data-aos="fade-in"
     >
       <v-tab
         v-for="item in items"
