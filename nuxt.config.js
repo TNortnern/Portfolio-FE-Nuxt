@@ -18,7 +18,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#59c5c2' },
   /*
    ** Global CSS
    */
@@ -30,7 +30,7 @@ export default {
     { src: '~/plugins/vue-particles', ssr: false, mode: 'client' },
     { src: '~/plugins/global-components', ssr: false, mode: 'client' },
     { src: '~/plugins/vue-scrolls', ssr: false, mode: 'client' },
-    { src: '~/plugins/aos', ssr: false, mode: 'client' },
+    // { src: '~/plugins/aos', ssr: false, mode: 'client' },
     { src: '~/plugins/vee-validate', ssr: false, mode: 'client' }
   ],
   /*
