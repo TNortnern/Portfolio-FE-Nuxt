@@ -44,7 +44,7 @@ const actions = {
       })
       commit('projects/setProjects', data.projects)
     } catch (err) {
-      console.log('err', err)
+      // console.log('err', err)
     }
   }
 }
