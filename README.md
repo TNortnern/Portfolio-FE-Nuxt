@@ -1,1 +1,1 @@
-![Live](https://trayvonnorthern.tech/)
+[Live](https://trayvonnorthern.tech/)
