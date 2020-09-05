@@ -2,7 +2,6 @@
   <v-container
     v-if="projects && projects.length"
     fluid
-    style="position: relative;"
     data-aos="zoom-in"
     :data-aos-duration="500"
     data-aos-easing="ease-in-sine"
@@ -69,11 +68,12 @@ export default {
     }
   },
   methods: {
-    beforeLeave ($el) {
-      // Leave in place.
-      const top = $el.offsetTop + 'px'
-      const left = $el.offsetLeft + 'px'
-      Object.assign($el.style, { left, top })
+    beforeLeave (el) {
+      const { marginLeft, marginTop, width, height } = window.getComputedStyle(el)
+      el.style.left = `${el.offsetLeft - parseFloat(marginLeft, 10)}px`
+      el.style.top = `${el.offsetTop - parseFloat(marginTop, 10)}px`
+      el.style.width = width
+      el.style.height = height
     }
   }
 }

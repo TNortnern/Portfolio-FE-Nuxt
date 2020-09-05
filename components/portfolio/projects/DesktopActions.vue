@@ -1,6 +1,7 @@
 <template>
   <v-card-actions class="d-none d-sm-flex">
     <v-btn
+      v-if="hostedLink !== '//#'"
       dark
       :color="$store.state.constants.colors.darkerBlue"
       :href="hostedLink ? hostedLink : '#'"
@@ -12,6 +13,7 @@
       View Live
     </v-btn>
     <v-btn
+      v-if="codeLink !== '//#'"
       dark
       :color="buttonColor"
       :href="codeLink ? codeLink : '#'"
