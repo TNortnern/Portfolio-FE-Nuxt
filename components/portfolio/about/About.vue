@@ -20,7 +20,7 @@
             class="text-center"
           >
             <li :data-aos="aosText">
-              <span class="d-block"><span class="subtitle-2"> - </span> <b>Freelance Developer</b><span class="d-block">RentApplications</span></span> February 2020 to Present
+              <span class="d-block"><span class="subtitle-2"> - </span> <b>Freelance Developer</b></span> February 2020 to Present
             </li>
             <li :data-aos="aosText">
               <span class="d-block"><span class="subtitle-2"> - </span> <b>Web Developer</b><span class="d-block">Marlin Network</span></span> July 2019 to December 2019
